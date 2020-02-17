@@ -16,9 +16,9 @@ body {
 }
 
 .container {
-  height: 800px;
+  height: 750px;
   width: 400px;
-  background: #eeeeee;
+  background: #eaeaea;
   border-radius: 1rem;
   overflow: hidden;
   display: -webkit-box;
@@ -31,25 +31,23 @@ body {
 }
 
 .container header {
-  color: #1b1b1b;
-  background: #fafafa;
+  color: #4e4e4e;
   font-size: 0.5rem;
   padding: 8px;
+  text-align: center;
 }
 
-.container #meta {
-  margin-top: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 0.5em;
-  color: #6d6d6d;
-}
-
-.container #album-art {
+.container #back {
+  margin: 1rem;
+  height: 36px;
+  width: 36px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #c8c8c8;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,15 +57,66 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 6rem;
+  border-radius: 50%;
+  padding: 4px;
+  -webkit-box-shadow: -3px -3px 3px 0 rgba(255, 255, 255, 0.5), 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: -3px -3px 3px 0 rgba(255, 255, 255, 0.5), 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container #back:hover {
+  background: #e4e4e4;
+  -webkit-box-shadow: inset -3px -3px 3px 0 rgba(255, 255, 255, 0.5), inset 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset -3px -3px 3px 0 rgba(255, 255, 255, 0.5), inset 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container #back:active {
+  background: #cfcfcf;
+  -webkit-box-shadow: inset -6px -6px 6px 0 rgba(255, 255, 255, 0.5), inset 6px 6px 6px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset -6px -6px 6px 0 rgba(255, 255, 255, 0.5), inset 6px 6px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container #album-art {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4rem;
   width: 100%;
 }
 
+.container #album-art .name h1 {
+  margin: 0;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: #5f5f5f;
+  font-weight: 400;
+}
+
+.container #album-art .name h2 {
+  font-weight: 400;
+  color: #9c9c9c;
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+}
+
 .container #album-art img {
-  height: 350px;
-  width: 350px;
-  -webkit-box-shadow: -6px -6px 6px 0 white, 6px 6px 6px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: -6px -6px 6px 0 white, 6px 6px 6px 0 rgba(0, 0, 0, 0.2);
+  height: 18rem;
+  width: 18rem;
+  border-radius: 50%;
+  border: 0.5rem solid #dedede;
+  -webkit-box-shadow: -16px -16px 16px 0 #ffff, 16px 16px 16px 0 #0002;
+          box-shadow: -16px -16px 16px 0 #ffff, 16px 16px 16px 0 #0002;
 }
 
 .action-container {
@@ -77,28 +126,13 @@ body {
   margin-bottom: 2rem;
 }
 
-.action-container .name h1 {
-  margin: 0;
-  font-size: 1rem;
-  color: #1b1b1b;
-  font-weight: 800;
-}
-
-.action-container .name h2 {
-  font-weight: 400;
-  color: #4d4d4d;
-  margin: 0;
-  font-size: 0.85rem;
-}
-
 .action-container .actions {
   margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -132,5 +166,17 @@ body {
   padding: 4px;
   -webkit-box-shadow: -3px -3px 3px 0 rgba(255, 255, 255, 0.5), 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
           box-shadow: -3px -3px 3px 0 rgba(255, 255, 255, 0.5), 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.action-container .actions span:hover {
+  background: #e4e4e4;
+  -webkit-box-shadow: inset -3px -3px 3px 0 rgba(255, 255, 255, 0.5), inset 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset -3px -3px 3px 0 rgba(255, 255, 255, 0.5), inset 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.action-container .actions span:active {
+  background: #cfcfcf;
+  -webkit-box-shadow: inset -6px -6px 6px 0 rgba(255, 255, 255, 0.5), inset 6px 6px 6px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset -6px -6px 6px 0 rgba(255, 255, 255, 0.5), inset 6px 6px 6px 0 rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=index.css.map */

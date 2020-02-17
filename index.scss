@@ -10,42 +10,85 @@ body {
 }
 
 .container {
-  height: 800px;
+  height: 750px;
   width: 400px;
-  background: #eeeeee;
+  background: #eaeaea;
   border-radius: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 
   header {
-    color: #1b1b1b;
-
-    background: #fafafa;
+    color: #4e4e4e;
     font-size: 0.5rem;
     padding: 8px;
+    text-align: center;
   }
 
-  #meta {
-    margin-top: 8px;
+  #back {
+    margin: 1rem;
+    height: 36px;
+    width: 36px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #c8c8c8;
+    user-select: none;
+
     display: flex;
     justify-content: center;
-    font-size: 0.5em;
-    color: #6d6d6d;
+    align-items: center;
+
+    border-radius: 50%;
+    padding: 4px;
+
+    box-shadow: -3px -3px 3px 0 rgba(255, 255, 255, 0.5),
+      3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background: #e4e4e4;
+      box-shadow: inset -3px -3px 3px 0 rgba(255, 255, 255, 0.5),
+        inset 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      background: #cfcfcf;
+      box-shadow: inset -6px -6px 6px 0 rgba(255, 255, 255, 0.5),
+        inset 6px 6px 6px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   #album-art {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
-    margin-top: 6rem;
+    margin-top: 4rem;
     width: 100%;
+
+    .name {
+      h1 {
+        margin: 0;
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        color: #5f5f5f;
+        font-weight: 400;
+      }
+      h2 {
+        font-weight: 400;
+        color: #9c9c9c;
+        margin: 0;
+        margin-top: 0.5rem;
+        font-size: 1.05rem;
+      }
+    }
+
     img {
-      height: 350px;
-      width: 350px;
-      //   border-radius: 50%;
-      box-shadow: -6px -6px 6px 0 rgba(255, 255, 255, 1),
-        6px 6px 6px 0 rgba(0, 0, 0, 0.2);
+      height: 18rem;
+      width: 18rem;
+      border-radius: 50%;
+      border: 0.5rem solid #dedede;
+      box-shadow: -16px -16px 16px 0 #ffff, 16px 16px 16px 0 #0002;
     }
   }
 }
@@ -56,25 +99,10 @@ body {
   margin-top: auto;
   margin-bottom: 2rem;
 
-  .name {
-    h1 {
-      margin: 0;
-      font-size: 1rem;
-      color: #1b1b1b;
-      font-weight: 800;
-    }
-    h2 {
-      font-weight: 400;
-      color: #4d4d4d;
-      margin: 0;
-      font-size: 0.85rem;
-    }
-  }
-
   .actions {
     margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     span:nth-child(2) {
@@ -98,6 +126,18 @@ body {
 
       box-shadow: -3px -3px 3px 0 rgba(255, 255, 255, 0.5),
         3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    span:hover {
+      background: #e4e4e4;
+      box-shadow: inset -3px -3px 3px 0 rgba(255, 255, 255, 0.5),
+        inset 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    span:active {
+      background: #cfcfcf;
+      box-shadow: inset -6px -6px 6px 0 rgba(255, 255, 255, 0.5),
+        inset 6px 6px 6px 0 rgba(0, 0, 0, 0.1);
     }
   }
 }
